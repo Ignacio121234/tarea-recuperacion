@@ -1,0 +1,27 @@
+Index: src/main/java/org/example/paneToDo.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example;\r\n\r\nimport javax.swing.*;\r\n\r\npublic class paneToDo extends JFrame {\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/paneToDo.java b/src/main/java/org/example/paneToDo.java
+--- a/src/main/java/org/example/paneToDo.java	(revision 7a6a837e63cd14b7bb92cbf2346f4b51fafd208c)
++++ b/src/main/java/org/example/paneToDo.java	(date 1752786765784)
+@@ -1,7 +1,15 @@
+ package org.example;
+ 
+ import javax.swing.*;
++import java.awt.*;
++
++public class paneToDo extends JPanel {
++
++    public paneToDo(){
++
++        setLayout(new FlowLayout());
+ 
+-public class paneToDo extends JFrame {
++
++    }
+ 
+ }

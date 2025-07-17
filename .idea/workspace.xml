@@ -4,15 +4,60 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1eed57ba-8f1c-428b-8908-463cb75b89d7" name="Changes" comment="" />
+    <list default="true" id="1eed57ba-8f1c-428b-8908-463cb75b89d7" name="Changes" comment="creacion clases ventana y PanelToDo">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/paneToDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/paneToDo.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "state": "MERGED",
+      "assignee": "Ignacio121234"
+    }
+  ],
+  "lastFilter": {
+    "state": "MERGED",
+    "assignee": "Ignacio121234"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Ignacio121234/tarea-recuperacion.git",
+    "accountId": "89ebfc6d-ddc8-4a14-872e-605adafc0380"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 3
 }]]></component>
@@ -24,8 +69,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "Main",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
@@ -38,6 +84,63 @@
       <option name="presentableId" value="Default" />
       <updated>1752782144534</updated>
     </task>
+    <task id="LOCAL-00001" summary="commit inicial">
+      <option name="closed" value="true" />
+      <created>1752782235199</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1752782235199</updated>
+    </task>
+    <task id="LOCAL-00002" summary="creacion clases ventana y PanelToDo">
+      <option name="closed" value="true" />
+      <created>1752785885582</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1752785885582</updated>
+    </task>
+    <task id="LOCAL-00003" summary="creacion clases ventana y PanelToDo">
+      <option name="closed" value="true" />
+      <created>1752786054371</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752786054371</updated>
+    </task>
+    <task id="LOCAL-00004" summary="creacion clases ventana y PanelToDo">
+      <option name="closed" value="true" />
+      <created>1752786075912</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1752786075912</updated>
+    </task>
+    <task id="LOCAL-00005" summary="creacion clases ventana y PanelToDo">
+      <option name="closed" value="true" />
+      <created>1752786822340</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1752786822340</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit inicial" />
+    <MESSAGE value="creacion clases ventana y PanelToDo" />
+    <option name="LAST_COMMIT_MESSAGE" value="creacion clases ventana y PanelToDo" />
   </component>
 </project>
