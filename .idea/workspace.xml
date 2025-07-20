@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1eed57ba-8f1c-428b-8908-463cb75b89d7" name="Changes" comment="creacion clases ventana y PanelToDo">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/paneToDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/paneToDo.java" afterDir="false" />
+    <list default="true" id="1eed57ba-8f1c-428b-8908-463cb75b89d7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Note.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PaneToDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PaneToDo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PanelDoing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PanelDoing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PanelDone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PanelDone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PanelMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PanelMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Ventana.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +78,8 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "Main",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "configurable.group.editor"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -124,7 +131,39 @@
       <option name="project" value="LOCAL" />
       <updated>1752786822340</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="creacion clases ventana y PanelToDo">
+      <option name="closed" value="true" />
+      <created>1752786969953</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1752786969953</updated>
+    </task>
+    <task id="LOCAL-00007" summary="creacion clases ventana y PanelToDo">
+      <option name="closed" value="true" />
+      <created>1752786991715</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1752786991715</updated>
+    </task>
+    <task id="LOCAL-00008" summary="creacion de Paneles , Menu  y desarollo de metodo para agregar notas">
+      <option name="closed" value="true" />
+      <created>1752944577787</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1752944577787</updated>
+    </task>
+    <task id="LOCAL-00009" summary="creacion de Paneles , Menu  y desarollo de metodo para agregar notas">
+      <option name="closed" value="true" />
+      <created>1752944614867</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1752944614867</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,6 +180,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit inicial" />
     <MESSAGE value="creacion clases ventana y PanelToDo" />
-    <option name="LAST_COMMIT_MESSAGE" value="creacion clases ventana y PanelToDo" />
+    <MESSAGE value="creacion de Paneles , Menu  y desarollo de metodo para agregar notas" />
+    <option name="LAST_COMMIT_MESSAGE" value="creacion de Paneles , Menu  y desarollo de metodo para agregar notas" />
   </component>
 </project>

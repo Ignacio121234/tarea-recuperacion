@@ -7,6 +7,7 @@ public class PanelDone extends JPanel {
 
     public PanelDone(){
         setBackground(Color.BLUE);
+
     }
 
 }

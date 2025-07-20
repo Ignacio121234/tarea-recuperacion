@@ -8,5 +8,6 @@ public class PanelDoing extends JPanel {
     public PanelDoing(){
 
         setBackground(Color.red);
+
     }
 }

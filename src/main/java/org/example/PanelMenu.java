@@ -63,9 +63,18 @@ public class PanelMenu extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == menubtn1) {
-            Note note = new Note("Nueva tarea");
+            String title = JOptionPane.showInputDialog(this, "Ingrese título de la nota:");
+            if (title == null || title.trim().isEmpty()) return;
+
+            String description = JOptionPane.showInputDialog(this, "Ingrese la descripción de la nota:");
+            if (description == null) description = "";
+
+
+
+            Note note = new Note(title.trim(),description.trim());
             paneToDo.add(note);
-            updateScreen();
+            paneToDo.revalidate();
+            paneToDo.repaint();
 
 
 
