@@ -14,7 +14,7 @@ public class Ventana extends JFrame {
         PaneToDo paneToDo = new PaneToDo();
         PanelDone panelDone = new PanelDone();
         PanelDoing panelDoing = new PanelDoing();
-        PanelMenu panelMenu = new PanelMenu(paneToDo);
+        PanelMenu panelMenu = new PanelMenu(paneToDo,panelDoing,panelDone);
 
 
 

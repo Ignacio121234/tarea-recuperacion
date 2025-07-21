@@ -7,7 +7,7 @@
 
 
         public PaneToDo() {
-            setLayout(new BoxLayout(this, BoxLayout.Y_AXIS)); // Apila verticalmente
+            setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
             setBackground(Color.GREEN);
 
 

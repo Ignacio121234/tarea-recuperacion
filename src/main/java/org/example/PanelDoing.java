@@ -7,7 +7,7 @@ public class PanelDoing extends JPanel {
 
     public PanelDoing(){
 
-        setBackground(Color.red);
-
+        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        setBackground(Color.RED);
     }
 }

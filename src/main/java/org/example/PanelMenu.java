@@ -14,9 +14,13 @@ public class PanelMenu extends JPanel implements ActionListener {
     private JButton menubtn2;
     private JButton menubtn3;
     private PaneToDo paneToDo;
+    private PanelDoing panelDoing;
+    private PanelDone panelDone;
 
-    public PanelMenu(PaneToDo paneToDo){
+    public PanelMenu(PaneToDo paneToDo,PanelDoing panelDoing,PanelDone panelDone){
         this.paneToDo = paneToDo;
+        this.panelDoing = panelDoing;
+        this.panelDone = panelDone;
 
         setLayout(new GridLayout(4,1));
         setPreferredSize(new Dimension(300,800));
@@ -71,7 +75,7 @@ public class PanelMenu extends JPanel implements ActionListener {
 
 
 
-            Note note = new Note(title.trim(),description.trim());
+            Note note = new Note(title.trim(),description.trim(),paneToDo,panelDoing,panelDone,1);
             paneToDo.add(note);
             paneToDo.revalidate();
             paneToDo.repaint();
