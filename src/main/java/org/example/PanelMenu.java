@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.*;
+import java.util.ArrayList;
 
 public class PanelMenu extends JPanel implements ActionListener {
     private JPanel panelbtn1;
@@ -16,11 +18,16 @@ public class PanelMenu extends JPanel implements ActionListener {
     private PaneToDo paneToDo;
     private PanelDoing panelDoing;
     private PanelDone panelDone;
+    private ArrayList<Note> NotasLista;
 
     public PanelMenu(PaneToDo paneToDo,PanelDoing panelDoing,PanelDone panelDone){
         this.paneToDo = paneToDo;
         this.panelDoing = panelDoing;
         this.panelDone = panelDone;
+
+        NotasLista = new ArrayList<>();
+
+
 
         setLayout(new GridLayout(4,1));
         setPreferredSize(new Dimension(300,800));
@@ -32,15 +39,18 @@ public class PanelMenu extends JPanel implements ActionListener {
         panelbtn3 = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
         menubtn1 = new JButton("Crear nota");
-        menubtn2 = new JButton("btn2");
-        menubtn3 = new JButton("btn3");
+        menubtn2 = new JButton("guardar notas");
+        menubtn3 = new JButton("agregar notas");
 
 
 
-        menubtn1.setPreferredSize(new Dimension(100,50));
+        menubtn1.setPreferredSize(new Dimension(150,50));
         menubtn1.addActionListener(this);
-        menubtn2.setPreferredSize(new Dimension(100,50));
-        menubtn3.setPreferredSize(new Dimension(100,50));
+        menubtn2.setPreferredSize(new Dimension(150,50));
+        menubtn2.addActionListener(this);
+        menubtn3.setPreferredSize(new Dimension(150,50));
+        menubtn3.addActionListener(this);
+
 
 
 
@@ -59,10 +69,7 @@ public class PanelMenu extends JPanel implements ActionListener {
 
     }
 
-    private void updateScreen() {
-        revalidate();
-        repaint();
-    }
+
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -80,10 +87,58 @@ public class PanelMenu extends JPanel implements ActionListener {
             paneToDo.revalidate();
             paneToDo.repaint();
 
+            NotasLista.add(note);
 
+
+
+
+
+        }
+        if (e.getSource() == menubtn2) {
+            guardarNotas();
+
+        }
+        if (e.getSource() == menubtn3) {
+            cargarNotas();
 
         }
 
 
+
     }
+    public void guardarNotas() {
+        try (ObjectOutputStream textguardar = new ObjectOutputStream(new FileOutputStream("notas.dat"))) {
+            textguardar.writeObject(NotasLista);
+            System.out.println("Notas guardadas correctamente.");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+
+        }
+    }
+
+    public void cargarNotas() {
+        try (ObjectInputStream textcargar = new ObjectInputStream(new FileInputStream("notas.dat"))) {
+            NotasLista = (ArrayList<Note>) textcargar.readObject();
+            System.out.println("Notas cargadas correctamente.");
+
+            for (Note n : NotasLista) {
+                if(n.getPosicion()==1){paneToDo.add(n);}
+
+                if(n.getPosicion()==2){panelDoing.add(n);}
+
+                if(n.getPosicion()==3){panelDone.add(n);}
+
+
+            }
+            paneToDo.revalidate();
+            paneToDo.repaint();
+            panelDoing.revalidate();
+            panelDoing.repaint();
+            panelDone.revalidate();
+            panelDone.repaint();
+        } catch (IOException | ClassNotFoundException ex) {
+            ex.printStackTrace();
+        }
+    }
+
 }

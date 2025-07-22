@@ -144,4 +144,8 @@ public class Note extends JPanel implements ActionListener {
             }
         }
     }
+
+    public int getPosicion(){
+        return posicion;
+    }
 }
