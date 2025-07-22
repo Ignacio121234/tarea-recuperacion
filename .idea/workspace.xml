@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1eed57ba-8f1c-428b-8908-463cb75b89d7" name="Changes" comment="agregamos noteData para separar metodos">
+    <list default="true" id="1eed57ba-8f1c-428b-8908-463cb75b89d7" name="Changes" comment="fix errores de metodo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Note.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PaneToDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PaneToDo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PanelMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PanelMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -183,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753220539581</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fix errores de metodo">
+      <option name="closed" value="true" />
+      <created>1753223780300</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1753223780300</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -204,6 +213,7 @@
     <MESSAGE value="implementacion de la clase Note permitiendo agregar un titulo y una descripcion" />
     <MESSAGE value="implementacion de guardado de datos y carga de datos para la aplicacion" />
     <MESSAGE value="agregamos noteData para separar metodos" />
-    <option name="LAST_COMMIT_MESSAGE" value="agregamos noteData para separar metodos" />
+    <MESSAGE value="fix errores de metodo" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix errores de metodo" />
   </component>
 </project>

@@ -18,12 +18,15 @@ public class Note extends JPanel implements ActionListener {
     private PanelDone panelDone;
     private int posicion;
 
+
+
     public Note(NoteData data, PaneToDo panelToDo, PanelDoing panelDoing, PanelDone panelDone) {
         this.data = data;
         this.panelToDo = panelToDo;
         this.panelDoing = panelDoing;
         this.panelDone = panelDone;
         this.posicion = data.getPosition();
+
 
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -79,6 +82,7 @@ public class Note extends JPanel implements ActionListener {
                 parent.revalidate();
                 parent.repaint();
             }
+            PanelMenu.panelgobal.actualizarResumen();
         }
 
         if (e.getSource() == btnIzq) {
@@ -86,8 +90,10 @@ public class Note extends JPanel implements ActionListener {
                 Container parent = getParent();
                 if (parent != null) {
                     parent.remove(this);
+                    PanelMenu.panelgobal.actualizarResumen();
                     parent.revalidate();
                     parent.repaint();
+
                 }
                 if (posicion == 2) {
                     panelToDo.add(this);
@@ -99,7 +105,7 @@ public class Note extends JPanel implements ActionListener {
                     posicion = 2;
                     data.setPosition(2);
                 }
-
+                PanelMenu.panelgobal.actualizarResumen();
                 revalidate();
                 repaint();
                 getParent().revalidate();
@@ -111,6 +117,7 @@ public class Note extends JPanel implements ActionListener {
                 Container parent = getParent();
                 if (parent != null) {
                     parent.remove(this);
+                    PanelMenu.panelgobal.actualizarResumen();
                     parent.revalidate();
                     parent.repaint();
                 }
@@ -118,6 +125,7 @@ public class Note extends JPanel implements ActionListener {
                     panelDoing.add(this);
                     posicion = 2;
                     data.setPosition(2);
+                    PanelMenu.panelgobal.actualizarResumen();
                     revalidate();
                     repaint();
                     getParent().revalidate();
@@ -126,11 +134,13 @@ public class Note extends JPanel implements ActionListener {
                     panelDone.add(this);
                     posicion = 3;
                     data.setPosition(3);
+                    PanelMenu.panelgobal.actualizarResumen();
                     revalidate();
                     repaint();
                     getParent().revalidate();
                     getParent().repaint();
                 }
+                PanelMenu.panelgobal.actualizarResumen();
                 revalidate();
                 repaint();
                 getParent().revalidate();
@@ -140,9 +150,6 @@ public class Note extends JPanel implements ActionListener {
     }
 
 
-    public NoteData getNoteData() {
-        return data;
-    }
 
     public NoteData getData() {
         return data;

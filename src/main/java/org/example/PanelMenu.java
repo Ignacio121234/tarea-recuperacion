@@ -19,16 +19,23 @@ public class PanelMenu extends JPanel implements ActionListener {
     private PanelDoing panelDoing;
     private PanelDone panelDone;
     private ArrayList<NoteData> NotasLista;
-    private ArrayList<NoteData> NotasListaClon;
+    private JTextArea resumenTareas;
+    public static PanelMenu panelgobal;
+
+
 
 
     public PanelMenu(PaneToDo paneToDo,PanelDoing panelDoing,PanelDone panelDone){
         this.paneToDo = paneToDo;
         this.panelDoing = panelDoing;
         this.panelDone = panelDone;
+        panelgobal = this;
 
         NotasLista = new ArrayList<>();
 
+        resumenTareas = new JTextArea(4, 20);
+        resumenTareas.setEditable(false);
+        resumenTareas.setFont(new Font("Arial", Font.PLAIN, 20));
 
 
         setLayout(new GridLayout(4,1));
@@ -64,7 +71,8 @@ public class PanelMenu extends JPanel implements ActionListener {
         add(panelbtn1);
         add(panelbtn2);
         add(panelbtn3);
-
+        add(resumenTareas);
+        actualizarResumen();
 
 
 
@@ -89,7 +97,7 @@ public class PanelMenu extends JPanel implements ActionListener {
             paneToDo.add(note);
             paneToDo.revalidate();
             paneToDo.repaint();
-            NotasLista.add(data);
+            actualizarResumen();
 
 
 
@@ -103,7 +111,7 @@ public class PanelMenu extends JPanel implements ActionListener {
         }
         if (e.getSource() == menubtn3) {
             cargarNotas();
-
+            actualizarResumen();
         }
 
 
@@ -179,6 +187,24 @@ public class PanelMenu extends JPanel implements ActionListener {
         } catch (IOException | ClassNotFoundException ex) {
             ex.printStackTrace();
         }
+    }
+    private int contarNotas(JPanel panel) {
+        int contador = 0;
+        for (Component comp : panel.getComponents()) {
+            if (comp instanceof Note) {
+                contador++;
+            }
+        }
+        return contador;
+    }
+    public void actualizarResumen() {
+        int countToDo = contarNotas(paneToDo);
+        int countDoing = contarNotas(panelDoing);
+        int countDone = contarNotas(panelDone);
+
+        String resumen = "Por hacer: " + countToDo + "\n" + "En proceso: " + countDoing + "\n" + "Terminado: " + countDone;
+
+        resumenTareas.setText(resumen);
     }
 }
 
