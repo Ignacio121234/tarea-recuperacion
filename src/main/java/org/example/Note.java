@@ -7,28 +7,23 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Note extends JPanel implements ActionListener {
-    private String title;
-    private String description;
+    private NoteData data;
     private JLabel tituloLabel;
     private JTextArea descripcionNota;
     private JButton btnElim;
     private JButton btnIzq;
     private JButton btnDer;
-    private int posicion = 1;
     private PaneToDo panelToDo;
     private PanelDoing panelDoing;
     private PanelDone panelDone;
+    private int posicion;
 
-
-    public Note(String title, String description,
-                PaneToDo panelToDo, PanelDoing panelDoing, PanelDone panelDone, int posicion) {
-        this.title = title;
-        this.description = description;
+    public Note(NoteData data, PaneToDo panelToDo, PanelDoing panelDoing, PanelDone panelDone) {
+        this.data = data;
         this.panelToDo = panelToDo;
         this.panelDoing = panelDoing;
         this.panelDone = panelDone;
-        this.posicion = posicion;
-
+        this.posicion = data.getPosition();
 
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -39,12 +34,12 @@ public class Note extends JPanel implements ActionListener {
                 new LineBorder(Color.DARK_GRAY, 2, true),
                 BorderFactory.createEmptyBorder(10, 10, 10, 10)));
 
-        tituloLabel = new JLabel(title);
+        tituloLabel = new JLabel(data.getTitle());
         tituloLabel.setFont(new Font("Arial", Font.BOLD, 14));
         tituloLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         add(tituloLabel);
 
-        descripcionNota = new JTextArea(description, 5, 15);
+        descripcionNota = new JTextArea(data.getDescription(), 5, 15);
         descripcionNota.setBackground(new Color(255, 255, 150));
         descripcionNota.setLineWrap(true);
         descripcionNota.setWrapStyleWord(true);
@@ -53,8 +48,6 @@ public class Note extends JPanel implements ActionListener {
 
         JScrollPane scroll = new JScrollPane(descripcionNota);
         scroll.setPreferredSize(new Dimension(230, 150));
-        scroll.setMaximumSize(new Dimension(230, 150));
-        scroll.setMinimumSize(new Dimension(230, 150));
         add(scroll);
 
         btnElim = new JButton("eliminar");
@@ -64,25 +57,21 @@ public class Note extends JPanel implements ActionListener {
         btnDer = new JButton("→");
         btnDer.addActionListener(this);
 
-        JPanel panelMotaBtns = new JPanel();
+        JPanel panelBtns = new JPanel();
+        panelBtns.setPreferredSize(new Dimension(250, 65));
+        panelBtns.setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10));
+        panelBtns.setBackground(new Color(255, 255, 200));
 
-        panelMotaBtns.setPreferredSize(new Dimension(250, 65));
-        panelMotaBtns.setMaximumSize(new Dimension(250, 65));
-        panelMotaBtns.setMinimumSize(new Dimension(250, 65));
+        panelBtns.add(btnIzq);
+        panelBtns.add(btnElim);
+        panelBtns.add(btnDer);
 
-        panelMotaBtns.setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10));
-        panelMotaBtns.setBackground(new Color(255, 255, 200));
-
-        panelMotaBtns.add(btnIzq);
-        panelMotaBtns.add(btnElim);
-        panelMotaBtns.add(btnDer);
-
-        add(panelMotaBtns);
-
-
+        add(panelBtns);
     }
 
     public void actionPerformed(ActionEvent e) {
+
+
         if (e.getSource() == btnElim) {
             Container parent = getParent();
             if (parent != null) {
@@ -90,8 +79,8 @@ public class Note extends JPanel implements ActionListener {
                 parent.revalidate();
                 parent.repaint();
             }
-
         }
+
         if (e.getSource() == btnIzq) {
             if (posicion > 1) {
                 Container parent = getParent();
@@ -145,7 +134,8 @@ public class Note extends JPanel implements ActionListener {
         }
     }
 
-    public int getPosicion(){
-        return posicion;
+
+    public NoteData getNoteData() {
+        return data;
     }
 }

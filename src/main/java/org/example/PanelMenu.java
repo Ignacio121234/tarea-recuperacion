@@ -18,7 +18,7 @@ public class PanelMenu extends JPanel implements ActionListener {
     private PaneToDo paneToDo;
     private PanelDoing panelDoing;
     private PanelDone panelDone;
-    private ArrayList<Note> NotasLista;
+    private ArrayList<NoteData> NotasLista;
 
     public PanelMenu(PaneToDo paneToDo,PanelDoing panelDoing,PanelDone panelDone){
         this.paneToDo = paneToDo;
@@ -82,12 +82,12 @@ public class PanelMenu extends JPanel implements ActionListener {
 
 
 
-            Note note = new Note(title.trim(),description.trim(),paneToDo,panelDoing,panelDone,1);
+            NoteData data = new NoteData(title.trim(), description.trim(), 1);
+            Note note = new Note(data, paneToDo, panelDoing, panelDone);
             paneToDo.add(note);
             paneToDo.revalidate();
             paneToDo.repaint();
-
-            NotasLista.add(note);
+            NotasLista.add(data);
 
 
 
@@ -112,33 +112,36 @@ public class PanelMenu extends JPanel implements ActionListener {
             System.out.println("Notas guardadas correctamente.");
         } catch (IOException ex) {
             ex.printStackTrace();
-
         }
     }
 
     public void cargarNotas() {
         try (ObjectInputStream textcargar = new ObjectInputStream(new FileInputStream("notas.dat"))) {
-            NotasLista = (ArrayList<Note>) textcargar.readObject();
+            NotasLista = (ArrayList<NoteData>) textcargar.readObject();
             System.out.println("Notas cargadas correctamente.");
 
-            for (Note n : NotasLista) {
-                if(n.getPosicion()==1){paneToDo.add(n);}
+            for (NoteData data : NotasLista) {
+                Note note = new Note(data, paneToDo, panelDoing, panelDone);
 
-                if(n.getPosicion()==2){panelDoing.add(n);}
-
-                if(n.getPosicion()==3){panelDone.add(n);}
-
-
+                if (data.getPosition() == 1) {
+                    paneToDo.add(note);
+                } else if (data.getPosition() == 2) {
+                    panelDoing.add(note);
+                } else if (data.getPosition() == 3) {
+                    panelDone.add(note);
+                }
             }
+
             paneToDo.revalidate();
             paneToDo.repaint();
             panelDoing.revalidate();
             panelDoing.repaint();
             panelDone.revalidate();
             panelDone.repaint();
+
         } catch (IOException | ClassNotFoundException ex) {
             ex.printStackTrace();
         }
     }
-
 }
+
