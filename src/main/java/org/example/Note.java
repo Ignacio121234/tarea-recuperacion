@@ -92,9 +92,12 @@ public class Note extends JPanel implements ActionListener {
                 if (posicion == 2) {
                     panelToDo.add(this);
                     posicion = 1;
+                    data.setPosition(1);
+
                 } else if (posicion == 3) {
                     panelDoing.add(this);
                     posicion = 2;
+                    data.setPosition(2);
                 }
 
                 revalidate();
@@ -114,6 +117,7 @@ public class Note extends JPanel implements ActionListener {
                 if (posicion == 1) {
                     panelDoing.add(this);
                     posicion = 2;
+                    data.setPosition(2);
                     revalidate();
                     repaint();
                     getParent().revalidate();
@@ -121,6 +125,7 @@ public class Note extends JPanel implements ActionListener {
                 } else if (posicion == 2) {
                     panelDone.add(this);
                     posicion = 3;
+                    data.setPosition(3);
                     revalidate();
                     repaint();
                     getParent().revalidate();
@@ -136,6 +141,10 @@ public class Note extends JPanel implements ActionListener {
 
 
     public NoteData getNoteData() {
+        return data;
+    }
+
+    public NoteData getData() {
         return data;
     }
 }

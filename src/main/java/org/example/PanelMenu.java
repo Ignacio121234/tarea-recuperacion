@@ -19,6 +19,8 @@ public class PanelMenu extends JPanel implements ActionListener {
     private PanelDoing panelDoing;
     private PanelDone panelDone;
     private ArrayList<NoteData> NotasLista;
+    private ArrayList<NoteData> NotasListaClon;
+
 
     public PanelMenu(PaneToDo paneToDo,PanelDoing panelDoing,PanelDone panelDone){
         this.paneToDo = paneToDo;
@@ -93,6 +95,7 @@ public class PanelMenu extends JPanel implements ActionListener {
 
 
 
+
         }
         if (e.getSource() == menubtn2) {
             guardarNotas();
@@ -107,6 +110,39 @@ public class PanelMenu extends JPanel implements ActionListener {
 
     }
     public void guardarNotas() {
+        NotasLista.clear();
+
+
+        for (Component comp : paneToDo.getComponents()) {
+            if (comp instanceof Note) {
+                Note note = (Note) comp;
+                NoteData data = note.getData();
+                data.setPosition(1);
+                NotasLista.add(data);
+            }
+        }
+
+
+        for (Component comp : panelDoing.getComponents()) {
+            if (comp instanceof Note) {
+                Note note = (Note) comp;
+                NoteData data = note.getData();
+                data.setPosition(2);
+                NotasLista.add(data);
+            }
+        }
+
+
+        for (Component comp : panelDone.getComponents()) {
+            if (comp instanceof Note) {
+                Note note = (Note) comp;
+                NoteData data = note.getData();
+                data.setPosition(3);
+                NotasLista.add(data);
+            }
+        }
+
+
         try (ObjectOutputStream textguardar = new ObjectOutputStream(new FileOutputStream("notas.dat"))) {
             textguardar.writeObject(NotasLista);
             System.out.println("Notas guardadas correctamente.");
@@ -115,12 +151,13 @@ public class PanelMenu extends JPanel implements ActionListener {
         }
     }
 
+
     public void cargarNotas() {
         try (ObjectInputStream textcargar = new ObjectInputStream(new FileInputStream("notas.dat"))) {
             NotasLista = (ArrayList<NoteData>) textcargar.readObject();
-            System.out.println("Notas cargadas correctamente.");
 
             for (NoteData data : NotasLista) {
+
                 Note note = new Note(data, paneToDo, panelDoing, panelDone);
 
                 if (data.getPosition() == 1) {
