@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1eed57ba-8f1c-428b-8908-463cb75b89d7" name="Changes" comment="documentacion del proyecto">
+    <list default="true" id="1eed57ba-8f1c-428b-8908-463cb75b89d7" name="Changes" comment="separacion de las clases en Logica y Vista">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/logica/NoteGestor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Note.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/NoteData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PaneToDo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PanelDoing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PanelDone.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PanelMenu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Ventana.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notas.dat" beforeDir="false" afterPath="$PROJECT_DIR$/notas.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/PanelMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/PanelMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/logica/NoteData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/logica/NoteData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +209,31 @@
       <option name="project" value="LOCAL" />
       <updated>1753234200231</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="documentacion del proyecto">
+      <option name="closed" value="true" />
+      <created>1753298846485</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1753298846485</updated>
+    </task>
+    <task id="LOCAL-00017" summary="separacion de las clases en Logica y Vista">
+      <option name="closed" value="true" />
+      <created>1753298883141</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1753298883141</updated>
+    </task>
+    <task id="LOCAL-00018" summary="separacion de las clases en Logica y Vista">
+      <option name="closed" value="true" />
+      <created>1753299065888</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1753299065888</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -237,6 +257,7 @@
     <MESSAGE value="fix errores de metodo" />
     <MESSAGE value="implementacion de contador de notas" />
     <MESSAGE value="documentacion del proyecto" />
-    <option name="LAST_COMMIT_MESSAGE" value="documentacion del proyecto" />
+    <MESSAGE value="separacion de las clases en Logica y Vista" />
+    <option name="LAST_COMMIT_MESSAGE" value="separacion de las clases en Logica y Vista" />
   </component>
 </project>

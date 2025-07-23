@@ -34,6 +34,7 @@ public class NoteData implements Serializable {
         return description;
     }
 
+
     public int getPosition() {
         return position;
     }
