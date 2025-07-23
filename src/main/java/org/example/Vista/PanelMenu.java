@@ -1,5 +1,6 @@
-package org.example;
+package org.example.Vista;
 
+import org.example.logica.NoteData;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
