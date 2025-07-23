@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1eed57ba-8f1c-428b-8908-463cb75b89d7" name="Changes" comment="se agregan titulos a los paneles pricipales">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/logica/NoteGestorTest.java" afterDir="false" />
+    <list default="true" id="1eed57ba-8f1c-428b-8908-463cb75b89d7" name="Changes" comment="se agregan test para clase NoteGestor">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/logica/NoteDataTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notas.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/logica/NoteData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/logica/NoteData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +72,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "JUnit.NoteDataTest.executor": "Run",
     "JUnit.NoteGestorTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "Main",
@@ -252,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753304034681</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="se agregan test para clase NoteGestor">
+      <option name="closed" value="true" />
+      <created>1753309205818</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1753309205818</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -279,6 +287,7 @@
     <MESSAGE value="separacion de las clases en Logica y Vista" />
     <MESSAGE value="creacion de clase NoteGestor para ocuparse de contar, guardar y cargar notas." />
     <MESSAGE value="se agregan titulos a los paneles pricipales" />
-    <option name="LAST_COMMIT_MESSAGE" value="se agregan titulos a los paneles pricipales" />
+    <MESSAGE value="se agregan test para clase NoteGestor" />
+    <option name="LAST_COMMIT_MESSAGE" value="se agregan test para clase NoteGestor" />
   </component>
 </project>

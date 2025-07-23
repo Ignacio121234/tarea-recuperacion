@@ -39,7 +39,16 @@ public class NoteData implements Serializable {
         return position;
     }
 
-    public void setPosition(int posi) {
-        this.position = posi;
+    public void setPosition(int position) {
+        this.position = position;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
