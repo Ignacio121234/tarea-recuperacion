@@ -3,9 +3,18 @@
     import javax.swing.*;
     import java.awt.*;
 
+
+    /**
+     * Panel que representa la seccion "Por hacer" en la aplicacion Kanban.
+     * Las notas se apilan en una columna vertical con fondo verde.
+     */
     public class PaneToDo extends JPanel {
 
 
+        /**
+         * Constructor del panel "Por hacer".
+         * Configura el layout vertical y el color de fondo.
+         */
         public PaneToDo() {
             setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
             setBackground(Color.GREEN);

@@ -7,23 +7,48 @@ import java.awt.event.ActionListener;
 import java.io.*;
 import java.util.ArrayList;
 
+/**
+ * Clase que representa el panel lateral del menú.
+ * Incluye botones para crear, guardar y cargar notas, así como un resumen de las tareas.
+ */
+
 public class PanelMenu extends JPanel implements ActionListener {
+
+
+    //Paneles que contienen los botones
     private JPanel panelbtn1;
     private JPanel panelbtn2;
     private JPanel panelbtn3;
 
+
+    //Botones del menu
     private JButton menubtn1;
     private JButton menubtn2;
     private JButton menubtn3;
+
+
+    //Referencias a los paneles principales
     private PaneToDo paneToDo;
     private PanelDoing panelDoing;
     private PanelDone panelDone;
+
+    //Lista de datos de las notas
     private ArrayList<NoteData> NotasLista;
+
+    //area en la que se muestran las cantidades de tareas
     private JTextArea resumenTareas;
+
+    //referencia global al panelmenu
     public static PanelMenu panelgobal;
 
 
-
+    /**
+     * Constructor del panel de menu.
+     *
+     * @param paneToDo Panel de tareas por hacer
+     * @param panelDoing Panel de tareas en proceso
+     * @param panelDone Panel de tareas completadas
+     */
 
     public PanelMenu(PaneToDo paneToDo,PanelDoing panelDoing,PanelDone panelDone){
         this.paneToDo = paneToDo;
@@ -32,6 +57,8 @@ public class PanelMenu extends JPanel implements ActionListener {
         panelgobal = this;
 
         NotasLista = new ArrayList<>();
+
+
 
         resumenTareas = new JTextArea(4, 20);
         resumenTareas.setEditable(false);
@@ -79,8 +106,11 @@ public class PanelMenu extends JPanel implements ActionListener {
 
     }
 
-
-
+    /**
+     * Maneja los eventos de los botones del menu.
+     *
+     * @param e Evento de accion
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == menubtn1) {
@@ -117,6 +147,10 @@ public class PanelMenu extends JPanel implements ActionListener {
 
 
     }
+
+    /**
+     * Guarda las notas actuales en un archivo llamado "notas.dat".
+     */
     public void guardarNotas() {
         NotasLista.clear();
 
@@ -159,7 +193,9 @@ public class PanelMenu extends JPanel implements ActionListener {
         }
     }
 
-
+    /**
+     * Carga las notas desde el archivo "notas.dat" y las distribuye en los paneles correspondientes.
+     */
     public void cargarNotas() {
         try (ObjectInputStream textcargar = new ObjectInputStream(new FileInputStream("notas.dat"))) {
             NotasLista = (ArrayList<NoteData>) textcargar.readObject();
@@ -197,6 +233,12 @@ public class PanelMenu extends JPanel implements ActionListener {
         }
         return contador;
     }
+
+    /**
+     * Cuenta cuantas notas hay en un panel dado.
+     *
+     * @return Cantidad de notas en el panel
+     */
     public void actualizarResumen() {
         int countToDo = contarNotas(paneToDo);
         int countDoing = contarNotas(panelDoing);

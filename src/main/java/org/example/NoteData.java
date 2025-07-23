@@ -2,11 +2,23 @@ package org.example;
 
 import java.io.Serializable;
 
+/**
+ * Clase que representa los datos de una nota.
+ * Contiene título, descripción y posicion .
+ */
 public class NoteData implements Serializable {
     private String title;
     private String description;
     private int position;
 
+
+    /**
+     * Constructor para crear una nota con título, descripción y posición.
+     *
+     * @param title      Título de la nota
+     * @param description Descripción de la nota
+     * @param position    Panel asociado (1: ToDo, 2: Doing, 3: Done)
+     */
     public NoteData(String title, String description, int position) {
         this.title = title;
         this.description = description;
