@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1eed57ba-8f1c-428b-8908-463cb75b89d7" name="Changes" comment="fix errores de metodo">
+    <list default="true" id="1eed57ba-8f1c-428b-8908-463cb75b89d7" name="Changes" comment="documentacion del proyecto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Note.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PaneToDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PaneToDo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PanelMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PanelMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Note.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/NoteData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PaneToDo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PanelDoing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PanelDone.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PanelMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Ventana.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +197,23 @@
       <option name="project" value="LOCAL" />
       <updated>1753223780300</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="implementacion de contador de notas">
+      <option name="closed" value="true" />
+      <created>1753225836369</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1753225836369</updated>
+    </task>
+    <task id="LOCAL-00015" summary="documentacion del proyecto">
+      <option name="closed" value="true" />
+      <created>1753234200231</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1753234200231</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -214,6 +235,8 @@
     <MESSAGE value="implementacion de guardado de datos y carga de datos para la aplicacion" />
     <MESSAGE value="agregamos noteData para separar metodos" />
     <MESSAGE value="fix errores de metodo" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix errores de metodo" />
+    <MESSAGE value="implementacion de contador de notas" />
+    <MESSAGE value="documentacion del proyecto" />
+    <option name="LAST_COMMIT_MESSAGE" value="documentacion del proyecto" />
   </component>
 </project>
