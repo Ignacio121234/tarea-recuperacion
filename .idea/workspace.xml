@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1eed57ba-8f1c-428b-8908-463cb75b89d7" name="Changes" comment="separacion de las clases en Logica y Vista">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/logica/NoteGestor.java" afterDir="false" />
+    <list default="true" id="1eed57ba-8f1c-428b-8908-463cb75b89d7" name="Changes" comment="creacion de clase NoteGestor para ocuparse de contar, guardar y cargar notas.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notas.dat" beforeDir="false" afterPath="$PROJECT_DIR$/notas.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/PanelMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/PanelMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/logica/NoteData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/logica/NoteData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/PanelDoing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/PanelDoing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vista/PanelDone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vista/PanelDone.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753299065888</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="creacion de clase NoteGestor para ocuparse de contar, guardar y cargar notas.">
+      <option name="closed" value="true" />
+      <created>1753303099206</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1753303099206</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -258,6 +265,7 @@
     <MESSAGE value="implementacion de contador de notas" />
     <MESSAGE value="documentacion del proyecto" />
     <MESSAGE value="separacion de las clases en Logica y Vista" />
-    <option name="LAST_COMMIT_MESSAGE" value="separacion de las clases en Logica y Vista" />
+    <MESSAGE value="creacion de clase NoteGestor para ocuparse de contar, guardar y cargar notas." />
+    <option name="LAST_COMMIT_MESSAGE" value="creacion de clase NoteGestor para ocuparse de contar, guardar y cargar notas." />
   </component>
 </project>

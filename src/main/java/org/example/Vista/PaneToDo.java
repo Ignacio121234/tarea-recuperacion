@@ -9,7 +9,7 @@ package org.example.Vista;
      * Las notas se apilan en una columna vertical con fondo verde.
      */
     public class PaneToDo extends JPanel {
-
+        private JLabel titulopanel;
 
         /**
          * Constructor del panel "Por hacer".
@@ -18,6 +18,12 @@ package org.example.Vista;
         public PaneToDo() {
             setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
             setBackground(Color.GREEN);
+
+            titulopanel = new JLabel("Por Hacer");
+            titulopanel.setFont(new Font("Arial", Font.PLAIN, 30));
+            titulopanel.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+            add(titulopanel);
 
 
 
