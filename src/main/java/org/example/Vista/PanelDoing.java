@@ -22,6 +22,8 @@ public class PanelDoing extends JPanel {
         titulopanel.setFont(new Font("Arial", Font.PLAIN, 30));
         titulopanel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
+
+
         add(titulopanel);
 
 

@@ -82,15 +82,15 @@ public class PanelMenu extends JPanel implements ActionListener {
 
         menubtn1 = new JButton("Crear nota");
         menubtn2 = new JButton("guardar notas");
-        menubtn3 = new JButton("agregar notas");
+        menubtn3 = new JButton("agregar notas guardadas");
 
 
 
-        menubtn1.setPreferredSize(new Dimension(150,50));
+        menubtn1.setPreferredSize(new Dimension(190,50));
         menubtn1.addActionListener(this);
-        menubtn2.setPreferredSize(new Dimension(150,50));
+        menubtn2.setPreferredSize(new Dimension(190,50));
         menubtn2.addActionListener(this);
-        menubtn3.setPreferredSize(new Dimension(150,50));
+        menubtn3.setPreferredSize(new Dimension(190,50));
         menubtn3.addActionListener(this);
 
 

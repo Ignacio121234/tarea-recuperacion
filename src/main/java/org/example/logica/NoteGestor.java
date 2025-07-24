@@ -11,11 +11,25 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * Clase encargada de gestionar las notas (NoteData)
+ * y la interacción con los paneles graficos donde se muestran
+ */
 public class NoteGestor {
     private  List<NoteData> NotasLista;
     private  PaneToDo paneToDo;
     private  PanelDoing panelDoing;
     private  PanelDone panelDone;
+
+
+    /**
+     * Constructor de NoteGestor
+     *
+     * @param paneToDo panel de tareas por hacer
+     * @param panelDoing panel de tareas en proceso
+     * @param panelDone panel de tareas terminadas
+     */
 
     public NoteGestor(PaneToDo paneToDo, PanelDoing panelDoing, PanelDone panelDone) {
         this.NotasLista = new ArrayList<>();
@@ -25,6 +39,12 @@ public class NoteGestor {
     }
 
 
+    /**
+     * Cuenta cuantas notas existen  en un panel dado.
+     *
+     * @param panel panel donde se contaran las notas
+     * @return cantidad de componentes que son instancias de Note
+     */
     public int contarNotas(JPanel panel) {
         int contador = 0;
         for (Component comp : panel.getComponents()) {
@@ -74,9 +94,13 @@ public class NoteGestor {
 
         try (ObjectOutputStream textguardar = new ObjectOutputStream(new FileOutputStream("notas.dat"))) {
             textguardar.writeObject(NotasLista);
+            JOptionPane.showMessageDialog(null, "Las notas se guardaron correctamente en 'notas.dat'.",
+                    "Guardado exitoso", JOptionPane.INFORMATION_MESSAGE);
             System.out.println("Notas guardadas correctamente.");
         } catch (IOException ex) {
             ex.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Error al guardar las notas",
+                    "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -109,6 +133,7 @@ public class NoteGestor {
 
             } catch (IOException | ClassNotFoundException ex) {
                 ex.printStackTrace();
+                JOptionPane.showMessageDialog(null, "No se pudieron cargar las notas. Asegurate de que el archivo 'notas.dat' exista", "Error al cargar", JOptionPane.ERROR_MESSAGE);
             }
         }}
 

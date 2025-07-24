@@ -26,6 +26,8 @@ public class NoteData implements Serializable {
         this.position = position;
     }
 
+
+    // setters y getters
     public String getTitle() {
         return title;
     }
